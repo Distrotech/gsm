@@ -81,7 +81,7 @@ INSTALL_ROOT	= ${DESTDIR}
 GSM_INSTALL_ROOT = $(INSTALL_ROOT)/usr
 GSM_INSTALL_LIB = $(GSM_INSTALL_ROOT)/lib
 GSM_INSTALL_INC = $(GSM_INSTALL_ROOT)/include
-GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/man/man3
+GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/man/share/man3
 
 
 # Where do you want to install the toast binaries and their manpage?
@@ -91,7 +91,7 @@ GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/man/man3
 
 TOAST_INSTALL_ROOT	  = $(INSTALL_ROOT)/usr
 TOAST_INSTALL_BIN = $(TOAST_INSTALL_ROOT)/bin
-TOAST_INSTALL_MAN = $(TOAST_INSTALL_ROOT)/man/man1
+TOAST_INSTALL_MAN = $(TOAST_INSTALL_ROOT)/man/share/man1
 
 #  Other tools
 
