@@ -133,7 +133,7 @@ CFLAGS	= $(CCFLAGS) $(SASR) $(DEBUG) $(MULHACK) $(FAST) $(LTP_CUT) \
 	$(WAV49) $(CCINC) -I$(INC)
 ######### It's $(CC) $(CFLAGS)
 
-LFLAGS	= $(LDFLAGS) $(LDINC)
+LFLAGS	= -L./lib $(LDFLAGS) $(LDINC)
 ######### It's $(LD) $(LFLAGS)
 
 
@@ -313,7 +313,7 @@ $(LIBGSM):	$(LIB) $(GSM_OBJECTS)
 
 $(LIBGSM_SO):	$(LIBGSM) $(GSM_OBJECTS)
 		-rm $(RMFLAGS) $(LIBGSM_SO)
-		$(CC) -shared $(GSM_OBJECTS) -o $(LIBGSM_SO)
+		$(CC) -shared $(GSM_OBJECTS) -L../lib -o $(LIBGSM_SO)
 
 # Toast, Untoast and Tcat -- the compress-like frontends to gsm.
 
@@ -325,7 +325,7 @@ $(UNTOAST):	$(BIN) $(TOAST)
 		$(LN) $(TOAST) $(UNTOAST)
 
 $(TCAT):	$(BIN) $(TOAST)
-		-rm $(RMFLAGS) $(TCAT)
+		@-rm $(RMFLAGS) $(TCAT)
 		$(LN) $(TOAST) $(TCAT)
 
 
