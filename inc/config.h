@@ -18,10 +18,12 @@
 #define	HAS_ERRNO_DECL	1		/* errno.h declares errno	*/
 
 #define	HAS_FSTAT 	1		/* fstat syscall		*/
+#ifndef __MINGW32__
 #define	HAS_FCHMOD 	1		/* fchmod syscall		*/
 #define	HAS_CHMOD 	1		/* chmod syscall		*/
 #define	HAS_FCHOWN 	1		/* fchown syscall		*/
 #define	HAS_CHOWN 	1		/* chown syscall		*/
+#endif
 /*efine	HAS__FSETMODE 	1		/* _fsetmode -- set file mode	*/
 
 #define	HAS_STRING_H 	1		/* /usr/include/string.h 	*/
